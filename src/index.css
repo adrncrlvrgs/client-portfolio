@@ -29,16 +29,8 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  background-image:url('./assets/bg.png');
-            background-size: cover;
-            background-position: center;
-            background-size: 104%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
 button {
   border-radius: 8px;
@@ -70,4 +62,75 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@font-face {
+  font-family: articulat;
+  src: url('./assets/ArticulatCF-Normal.ttf');
+}
+
+.articulat{
+  font-family: articulat;
+}
+
+@font-face {
+  font-family: articulat-m;
+  src: url('./assets/ArticulatCF-Medium.ttf');
+}
+
+.articulat-m{
+  font-family: articulat-m;
+}
+@font-face {
+  font-family: articulat-l;
+  src: url('./assets/ArticulatCF-Light.ttf');
+}
+
+.articulat-l{
+  font-family: articulat-l;
+}
+
+@font-face {
+  font-family: articulat-h;
+  src: url('./assets/ArticulatCF-Heavy.ttf');
+}
+
+.articulat-h{
+  font-family: articulat-h;
+}
+
+@font-face {
+  font-family: articulat-sb;
+  src: url('./assets/ArticulatCF-DemiBold.ttf');
+}
+
+.articulat-sb{
+  font-family: articulat-sb;
+}
+
+@font-face {
+  font-family: articulat-xb;
+  src: url('./assets/ArticulatCF-ExtraBold.ttf');
+}
+
+.articulat-xb{
+  font-family: articulat-xb;
+}
+
+@font-face {
+  font-family: articulat-b;
+  src: url('./assets/ArticulatCF-Bold.ttf');
+}
+
+.articulat-b{
+  font-family: articulat-b;
+}
+
+@font-face {
+  font-family: brother;
+  src: url('./assets/BROTHER-Bold.otf');
+}
+
+.brother{
+  font-family: brother;
 }
