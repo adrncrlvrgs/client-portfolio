@@ -5,9 +5,7 @@ import Home from './page/HomePage';
 import Works from './page/Works';
 import './App.css'
 
-
 function App() {
-
 
   return (
     <BrowserRouter>
