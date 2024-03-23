@@ -13,7 +13,8 @@ const Home = () => {
         };
     }, []); 
     return (
-        
+        // https://tympanus.net/Development/Scroll3DGrid/
+        // https://devdevout.com/css/css-animated-backgrounds#g
         <div style={{
             background: 'rgb(41,41,41)',
             height: '100%',
@@ -33,10 +34,10 @@ const Home = () => {
             
                 <div className="grid grid-cols-4 grid-rows-2 gap-4">
                     <div className="row-span-2 col-span-2 p-5" style={{
-                        background:'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))',
-                        backdropFilter: 'blur(10px)',
+                        background:'linear-gradient(135deg, rgba(242, 240, 235, 0.1), rgba(51, 51, 51, 0.1))',
+                        backdropFilter: 'blur(15px)',
                         borderRadius: '20px',
-                        border: '1px solid rgba(255, 255, 255, 0.18)',
+                        border: '2px solid rgba(242, 240, 235, 0.10)',
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
                     }}>
                         <div className="">
@@ -57,24 +58,24 @@ const Home = () => {
                     </div>
 
                     <div className="" style={{
-                        background:'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))',
-                        backdropFilter: 'blur(10px)',
+                        background:'linear-gradient(135deg, rgba(242, 240, 235, 0.1), rgba(51, 51, 51, 0.1))',
+                        backdropFilter: 'blur(15px)',
                         borderRadius: '20px',
-                        border: '1px solid rgba(255, 255, 255, 0.18)',
+                        border: '2px solid rgba(242, 240, 235, 0.10)',
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
                     }} >PICTURE</div>
                     <div className="row-span-2 bg-slate-300" style={{
                         background:'linear-gradient(135deg, rgba(242, 240, 235, 0.1), rgba(51, 51, 51, 0.1))',
-                        backdropFilter: 'blur(10px)',
+                        backdropFilter: 'blur(15px)',
                         borderRadius: '20px',
                         border: '2px solid rgba(242, 240, 235, 0.10)',
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
                     }} >Vertical carousel of works</div>
                     <div className="" style={{
-                        background:'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))',
-                        backdropFilter: 'blur(10px)',
+                        background:'linear-gradient(135deg, rgba(242, 240, 235, 0.1), rgba(51, 51, 51, 0.1))',
+                        backdropFilter: 'blur(15px)',
                         borderRadius: '20px',
-                        border: '1px solid rgba(255, 255, 255, 0.18)',
+                        border: '2px solid rgba(242, 240, 235, 0.10)',
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
                     }}>LOGO</div>
                 </div>
