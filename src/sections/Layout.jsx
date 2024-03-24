@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
     return (
-        <div class="w-full h-screen flex flex-col">
+        <div class="w-full flex flex-col">
             <section class="flex  items-center " style={{flexDirection: 'column'}}><Navbar/></section>
             <main class="flex flex-1 absolute" style={{
                 height: '100%',

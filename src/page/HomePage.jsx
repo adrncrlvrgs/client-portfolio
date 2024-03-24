@@ -12,6 +12,19 @@ const Home = () => {
             }, { duration: 5000, fill: "forwards" });
         };
     }, []); 
+
+   const myID = document.getElementById("myID");
+
+    var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 10) {
+            myID.className = "bottomMenu show"
+        } else {
+            myID.className = "bottomMenu hide"
+        }
+    };
+
+window.addEventListener("scroll", myScrollFunc);
     return (
         // https://tympanus.net/Development/Scroll3DGrid/
         // https://devdevout.com/css/css-animated-backgrounds#g
@@ -21,13 +34,13 @@ const Home = () => {
             width: '100%',
             display: 'flex',
             justifyContent: 'center',
-            overflow:'hidden'
+            overflow:'hidden',
         }}>
           
             <div id="blob"></div>
             <div className="overflow-hidden" id="blur" style={{backdropFilter: 'blur(60px)', overflow: 'unset' }}></div>
+            <div id="myID" class="bottomMenu hide">Hi there</div>
             <div className="z-40" style={{
-                height: '80%',
                 width: '80%',
                 alignSelf:'center',
             }}>
@@ -79,7 +92,10 @@ const Home = () => {
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
                     }}>LOGO</div>
                 </div>
+                
             </div>
+            
+        
         </div>
     );
   };
