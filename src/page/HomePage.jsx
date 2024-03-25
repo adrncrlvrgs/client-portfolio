@@ -23,6 +23,7 @@ const Home = () => {
             myID.className = "bottomMenu hide"
         }
     };
+    
 
 window.addEventListener("scroll", myScrollFunc);
     return (
