@@ -24,7 +24,6 @@ const Home = () => {
         }
     };
     
-
 window.addEventListener("scroll", myScrollFunc);
     return (
         // https://tympanus.net/Development/Scroll3DGrid/
@@ -45,7 +44,6 @@ window.addEventListener("scroll", myScrollFunc);
                 width: '80%',
                 alignSelf:'center',
             }}>
-            
                 <div className="grid grid-cols-4 grid-rows-2 gap-4">
                     <div className="row-span-2 col-span-2 p-5" style={{
                         background:'linear-gradient(135deg, rgba(242, 240, 235, 0.1), rgba(51, 51, 51, 0.1))',
