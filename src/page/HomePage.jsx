@@ -6,29 +6,55 @@ const Home = () => {
         window.onpointermove = event => { 
             const { clientX, clientY } = event;
             
+            // Define maximum values for left and top positions
+            const maxWidth = window.innerWidth - blob.offsetWidth;
+            const maxHeight = window.innerHeight - blob.offsetHeight;
+
+            // Adjust clientX and clientY to ensure they stay within bounds
+            const adjustedLeft = Math.min(clientX, maxWidth);
+            const adjustedTop = Math.min(clientY, maxHeight);
+            const finalLeft = Math.max(adjustedLeft, 1);
+            const finalTop = Math.max(adjustedTop, 1);
+
+            // console.log(`${finalLeft}`,`${finalTop}`)
+
             blob.animate({
-                left: `${clientX}px`,
-                top: `${clientY}px`
-            }, { duration: 5000, fill: "forwards" });
+                left: `${finalLeft}px`,
+                top: `${finalTop}px`,
+            }, { duration: 1000, fill: "forwards" });
         };
+
+        const myID = document.getElementById("myID");
+  
+
+        var myScrollFunc = function () {
+            var y = window.scrollY;
+            if (y >= 200) {
+                myID.className = "bottomMenu show absolute";
+                blob.classList.add("blobHide");
+               
+         
+            }
+             else {
+                myID.className = "bottomMenu hide absolute";
+                blob.classList.remove("blobHide");
+                blob.classList.add("blobShow ");
+               
+                
+            }
+        };
+        
+        window.addEventListener("scroll", myScrollFunc);
+        
     }, []); 
 
-   const myID = document.getElementById("myID");
 
-    var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 10) {
-            myID.className = "bottomMenu show"
-        } else {
-            myID.className = "bottomMenu hide"
-        }
-    };
-    
-window.addEventListener("scroll", myScrollFunc);
     return (
         // https://tympanus.net/Development/Scroll3DGrid/
         // https://devdevout.com/css/css-animated-backgrounds#g
-        <div style={{
+
+        <>
+        <div className="flex-col" style={{
             background: 'rgb(41,41,41)',
             height: '100%',
             width: '100%',
@@ -36,13 +62,15 @@ window.addEventListener("scroll", myScrollFunc);
             justifyContent: 'center',
             overflow:'hidden',
         }}>
-          
-            <div id="blob"></div>
-            <div className="overflow-hidden" id="blur" style={{backdropFilter: 'blur(60px)', overflow: 'unset' }}></div>
-            <div id="myID" class="bottomMenu hide">Hi there</div>
-            <div className="z-40" style={{
+            
+            <div id="blob"  className="vissible"></div>
+            <div className="h-100" id="blur" style={{backdropFilter: 'blur(60px)', }}></div>
+            
+            <div className="" style={{
                 width: '80%',
                 alignSelf:'center',
+                
+                
             }}>
                 <div className="grid grid-cols-4 grid-rows-2 gap-4">
                     <div className="row-span-2 col-span-2 p-5" style={{
@@ -93,9 +121,15 @@ window.addEventListener("scroll", myScrollFunc);
                 </div>
                 
             </div>
+
+            <div id="myID" className="bottomMenu hide absolute">Hi TEST</div>
             
         
         </div>
+
+        
+        </>
+
     );
   };
   

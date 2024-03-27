@@ -6,11 +6,13 @@ const Layout = () => {
     return (
         <div class="w-full flex flex-col">
             <section class="flex  items-center " style={{flexDirection: 'column'}}><Navbar/></section>
-            <main class="flex flex-1 absolute" style={{
+            <main id="layout" class="flex flex-1 absolute" style={{
                 height: '100%',
                 width: '100%',
                 zIndex: -1,
-                overflow: 'hidden'
+               
+                // overflow: 'hidden'
+                
             }}>
                 <Outlet/>
             </main>
