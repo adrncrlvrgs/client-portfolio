@@ -1,4 +1,5 @@
 import React,{useEffect} from "react";
+import Work from "../components/Work";
 const Home = () => {
     useEffect(() => {
         const blob = document.getElementById("blob");
@@ -30,15 +31,15 @@ const Home = () => {
         var myScrollFunc = function () {
             var y = window.scrollY;
             if (y >= 200) {
-                myID.className = "bottomMenu show absolute";
+                myID.className = "bottomMenu show absolute content-center flex flex-col flex-nowrap place-content-center";
                 blob.classList.add("blobHide");
                
          
             }
              else {
-                myID.className = "bottomMenu hide absolute";
+                myID.className = "bottomMenu hide absolute content-center flex flex-col flex-nowrap place-content-center";
                 blob.classList.remove("blobHide");
-                blob.classList.add("blobShow ");
+         
                
                 
             }
@@ -122,7 +123,9 @@ const Home = () => {
                 
             </div>
 
-            <div id="myID" className="bottomMenu hide absolute">Hi TEST</div>
+            <div id="myID" className="bottomMenu hide absolute flex place-content-center">
+                <Work/>
+            </div>
             
         
         </div>
