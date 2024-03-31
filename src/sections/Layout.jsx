@@ -4,7 +4,6 @@ import { Outlet } from "react-router-dom";
 import Work from "../components/Work";
 const Layout = () => {
     return (
-        
         <div className="">
             {/* <section className="flex  items-center " style={{flexDirection: 'column'}}><Navbar/></section> */}
             <Work/>
@@ -21,5 +20,6 @@ const Layout = () => {
         </div>
     );
 };
+
 
 export default Layout;
