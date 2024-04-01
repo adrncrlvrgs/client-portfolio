@@ -5,7 +5,7 @@ import Work from "../components/Work";
 const Layout = () => {
     return (
         <div className="">
-            {/* <section className="flex  items-center " style={{flexDirection: 'column'}}><Navbar/></section> */}
+            <section className="flex  items-center " style={{flexDirection: 'column'}}><Navbar/></section>
             <Work/>
             {/* <main id="layout" className="flex flex-1 absolute" style={{
                 height: '100%',
@@ -20,6 +20,5 @@ const Layout = () => {
         </div>
     );
 };
-
 
 export default Layout;
