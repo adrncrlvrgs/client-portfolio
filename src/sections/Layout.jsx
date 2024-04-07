@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import Work from "../components/Work";
+
 const Layout = () => {
     return (
         <div className="">
